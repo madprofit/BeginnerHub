@@ -4,9 +4,9 @@ Is a social site for Beginning Programmers. This site offers beginners the oppor
 
   [Trello link](https://trello.com/b/uTOozbya/beginnerhub)
   
--Profile info
--programming skills
--other skills 
--interests
--goals
--projects
+##-Profile info <br>
+##-programming skills
+##-other skills 
+##-interests
+##-goals
+##-projects
