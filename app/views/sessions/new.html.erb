@@ -1,10 +1,15 @@
-<h1>Login</h1>
-<form action="/login" method="post">
-    <label>Email</label>
-    <input name="email" type="email">
+<%= form_for :login do |f| %>
+  <div>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+  </div>
+  <div>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+  </div>
+  <div>
+      <%= f.submit 'Log In' %>
+  </div>
+<% end %>
 
-    <label>Password</label>
-    <input name="password" type="password">
 
-    <button>Login</button>
-</form>
