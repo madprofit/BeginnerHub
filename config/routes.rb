@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   root 'users#index'
 
-  get 'signup' => 'users#new'
+  get 'users/new' => 'users#new'
 
-  post 'signup' => 'users#create'
+  post 'users' => 'users#create'
 
   get '/users/:id' => 'users#show', as: :user
 

@@ -10,6 +10,6 @@
     <button>Logout</button>
 </form>
     <% else %>
-    <a href="/login">login</a>
-    <a href="/signup">Sign Up</a>
+    <%= link_to 'Log in', login_path %>
+    <%= link_to 'Sign up', users_new_path %>
     <% end %>
