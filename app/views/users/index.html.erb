@@ -1,15 +1,15 @@
 <% if current_user %>
-<h1>Users</h1>
-<ul>
-<% @users.each do |user| %>
-    <li><%= user.email %> - <%= user.password_digest %> - <%= user.name %> </li>
-<% end %>
-</ul>
-<form action="/logout" method="post">
+  <h1>Users</h1>
+  <ul>
+  <% @users.each do |user| %>
+  <li><%= user.email %> - <%= user.password_digest %> - <%= user.name %> </li>
+  <% end %>
+  </ul>
+  <form action="/logout" method="post">
     <input name="_method" value="DELETE" type="hidden">
     <button>Logout</button>
-</form>
-    <% else %>
-    <%= link_to 'Log in', login_path %>
-    <%= link_to 'Sign up', users_new_path %>
-    <% end %>
+  </form>
+<% else %>
+  <%= link_to 'Log in', login_path %>
+  <%= link_to 'Sign up', users_new_path %>
+<% end %>

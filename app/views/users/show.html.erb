@@ -1,12 +1,19 @@
 <p>GA Hub profile</p>
 <ul>
-
     <li>
     <%= @user.name %> <br>
     <%= @user.email %> <br>
     <%= @user.status %> <br>
-
     </li>
-
 </ul>
 
+<% @user.activities.each do |activity| %>
+  <%= activity.title %>
+<% end %>
+
+<%= link_to 'add activities', new_activity_path %>
+<%= link_to 'delete activities', activity_path %>
+
+<form action="/logout" method="post">
+    <input name="_method" value="DELETE" type="hidden">
+    <button>Logout</button>

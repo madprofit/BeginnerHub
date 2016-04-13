@@ -1,26 +1,23 @@
 Rails.application.routes.draw do
 
-  resources :activities
+  resources :activities, param: :id
 
   root 'users#index'
 
   get 'users/new' => 'users#new'
-
   post 'users' => 'users#create'
-
   get '/users/:id' => 'users#show', as: :user
+  get '/profile' => 'users#show'
 
   get 'login' => 'sessions#new'
-
   post 'login' => 'sessions#create'
-
   delete 'logout' => 'sessions#destroy'
 
+  #get "activities/:id/edit" => "activities#edit", as: :edit_activity
+  #destroy "activities/:id/delete" => "activities#destroy", as: :delete_activity
 
 
-
-
-  # The priority is based upon order of creation: first created -> highest priority.
+   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
