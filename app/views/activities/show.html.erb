@@ -8,4 +8,8 @@
     <%= @activity.user_id %>
     </li>
 </ul>
+    <div>
+    <%= link_to 'Destroy', @activity, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+
 

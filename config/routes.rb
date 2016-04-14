@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :activities, param: :id
+  resources :activities
+  # ,param: :activity_id
 
   root 'users#index'
 
@@ -13,8 +14,8 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
-  #get "activities/:id/edit" => "activities#edit", as: :edit_activity
-  #destroy "activities/:id/delete" => "activities#destroy", as: :delete_activity
+  # get "activities/:id/edit" => "activities#edit", as: :edit_activity
+  # destroy "activities/:id/delete" => "activities#destroy", as: :delete_activity
 
 
    # The priority is based upon order of creation: first created -> highest priority.

@@ -2,7 +2,7 @@ class ActivitiesController < ApplicationController
   def index
     @activity = Activity.all.order(created_at: 'DESC')
     @user = User.find(session[:user_id])
-    @activity = @user.activity.new
+    # @activity = @user.activity.all
   end
 
   def new
@@ -27,8 +27,12 @@ class ActivitiesController < ApplicationController
   end
 
   def destroy
-      activity.delete(:activity_id)
-      redirect_to '/profile'
+
+    activity = Activity.find(params[:id])
+    activity.destroy
+    redirect_to '/profile', :notice => "You destroyed a like"
+    # Activity.find(params[:id]).destroy
+    # redirect_to '/profile'
   end
 
 private
