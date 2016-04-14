@@ -15,6 +15,10 @@
       <%= f.select :status, options_for_select([["Select One", ""], "prospective student", "student", "graduate"]) %>
   </div>
   <div>
+      <%= f.label :avatar %>
+      <%= f.file_field :avatar %>
+  </div>
+  <div>
       <%= f.label :password %>
       <%= f.password_field :password %>
   </div>
@@ -27,6 +31,3 @@
   </div>
 <% end %>
 
-<%= form_for @user, url: users_path, html: { multipart: true } do |form| %>
-  <%= form.file_field :avatar %>
-<% end %>

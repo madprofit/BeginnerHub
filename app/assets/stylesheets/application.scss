@@ -19,9 +19,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@font-family-base, @font-size-base, @line-height-base;
+
 
 body {
-  background-color: orange;
+  background-color: #fff;
 }
+
 
 
