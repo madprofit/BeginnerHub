@@ -1,17 +1,16 @@
 <div class="col-md-4 col-md-offset-4">
 <h3>Activities</h3>
-<ul>
-
-    <li>
-    <%= link_to @activity.title %> <br>
-    <%= @activity.description %> <br>
-    <%= @activity.when %> <br>
-    <%= @activity.user_id %>
-    </li>
-</ul>
-    <div>
-    <%= link_to 'Delete', @activity, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
+  <ul>
+      <li>
+      <%= link_to @activity.title %> <br>
+      <%= @activity.description %> <br>
+      <%= @activity.when %> <br>
+      <%= @activity.user_id %>
+      </li>
+  </ul>
+      <div>
+      <%= link_to 'Delete', @activity, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
 </div>
 
 

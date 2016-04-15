@@ -13,6 +13,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  font-size: 100%;
 }
 
 .table-responsive.table-striped {
@@ -25,8 +26,20 @@
 .user {
   font-size: 25px;
   font-weight: bolder;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.activity {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .submit {
   padding-top: 15px;
+}
+
+.block{
+  display: inline-block;
 }

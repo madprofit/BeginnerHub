@@ -1,14 +1,16 @@
-<div class="col-md-4 col-md-offset-4">
-<h1>Edit your activites</h1>
+<div class="col-md-4">
+<h3>Edit your activites</h3>
 
 <%= form_for @activity do |f| %>
   <div>
       <%= f.label :title %>
       <%= f.text_field :title %>
   </div>
-  <div>
-      <%= f.label :description %>
-      <%= f.text_field :description %>
+  <div class="row-fluid">
+    <div class="span6">
+      <%= f.label :description %> <br>
+      <%= text_area(:description, :activity, cols: 100, rows: 10) %>
+    </div>
   </div>
   <div>
       <%= f.label :when %>
