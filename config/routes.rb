@@ -16,8 +16,8 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
-  # get "activities/:id/edit" => "activities#edit", as: :edit_activity
-  # destroy "activities/:id/delete" => "activities#destroy", as: :delete_activity
+  get "activities/:id/edit" => "activities#edit"
+  delete "activities/:id/destroy" => "activities#destroy"
 
 
    # The priority is based upon order of creation: first created -> highest priority.

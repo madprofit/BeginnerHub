@@ -22,6 +22,19 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  def edit
+    @activity = Activity.find(params[:id])
+  end
+
+  def update
+    @activity = Activity.find(params[:id])
+    if @activity.update_attributes(activity_params)
+      redirect_to user_path
+    else
+      render :edit
+    end
+  end
+
   def show
     @activity = Activity.find(params[:id])
   end
