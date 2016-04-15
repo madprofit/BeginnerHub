@@ -1,36 +1,40 @@
+
+
 <div class="col-md-4 col-md-offset-4">
-<h1>Sign Up</h1>
+<h1 class="intro">Sign Up</h1>
 
 
 <%= form_for @user do |f| %>
   <div>
-      <%= f.label :name %>
+      <%= f.label :name %> <br>
       <%= f.text_field :name %>
   </div>
   <div>
-      <%= f.label :email %>
+      <%= f.label :email %> <br>
       <%= f.text_field :email %>
   </div>
   <div>
-      <%= f.label :status %>
-      <%= f.select :status, options_for_select([["Select One", ""], "prospective student", "student", "graduate"]) %>
-  </div>
-  <div>
-      <%= f.label :avatar %>
-      <%= f.file_field :avatar %>
-  </div>
-  <div>
-      <%= f.label :password %>
+      <%= f.label :password %> <br>
       <%= f.password_field :password %>
   </div>
    <div>
-      <%= f.label :password_confimation %>
+      <%= f.label :password_confimation %> <br>
       <%= f.password_field :password_confirmation %>
   </div>
   <div>
-      <%= f.submit 'Sign Up' %>
+      <%= f.label :status %> <br>
+      <%= f.select :status, options_for_select([["Select One", ""], "prospective student", "student", "graduate"]) %>
+  </div>
+  <div>
+      <%= f.label :avatar %> <br>
+      <%= f.file_field :avatar %>
+  </div>
+
+  <div class="submit">
+      <%= f.submit 'Submit' %>
   </div>
 <% end %>
 </div>
+
 
 
